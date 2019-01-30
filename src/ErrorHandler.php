@@ -27,6 +27,11 @@ class ErrorHandler extends BaseErrorHandler
      */
     public $handler;
 
+    /**
+     * If this isn't here, Yii gets cranky
+     */
+    public $errorAction;
+
     public function init()
     {
         parent::init();
