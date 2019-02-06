@@ -1,0 +1,18 @@
+language: php
+php:
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - '7.2'
+  - '7.3'
+
+env:
+  matrix:
+    - COMPOSER_OPTIONS="--prefer-lowest --prefer-stable"
+    - COMPOSER_OPTIONS=""
+
+install:
+  - composer update $COMPOSER_OPTIONS
+
+script:
+  - vendor/bin/phpunit
